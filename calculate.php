@@ -16,7 +16,7 @@ class Calculate
         $this->dateCreated = Validate::validateDate($dateCreated);
         $this->estimatedTime = Validate::validateTime($estimatedTime);
         if ($this->dateCreated == false) {
-            throw new Exception("Invalid date. The format should be YYYY-MM-DDTHH:mm (must be a working day between the working hours)");
+            throw new Exception("Invalid date. The format should be YYYY-MM-DD[T| ]HH:mm (must be a working day between the working hours)");
         }
         if($this->estimatedTime == false) {
             throw new Exception("Invalid estimation time. Must be digits only");
